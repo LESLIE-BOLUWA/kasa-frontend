@@ -17,7 +17,94 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+/* HEADER */
+.header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
+.header__logo {
+  height: 48px;
+  width: auto;
+}
+.header__nav {
+  display: flex;
+  gap: 28px;
+}
+.header__link {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+.header__link.active {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 48px;
+  background: #000;
+  color: #fff;
+  padding: 40px 24px;
+  display: grid;
+  place-items: center;
+  gap: 12px;
+}
+.footer__logo {
+  height: 36px;
+}
+.footer__text {
+  opacity: 0.9;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial,
+    sans-serif;
+  color: #111;
+}
+
+/* Conteneur central */
+.main {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px 48px;
+}
+
+/* Titres par défaut plus raisonnables */
+h1 {
+  font-size: 28px;
+  line-height: 1.2;
+  margin: 24px 0 16px;
+  font-weight: 700;
+}
+h2 {
+  font-size: 22px;
+  margin: 20px 0 12px;
+}
+p {
+  line-height: 1.6;
+}
+
+/* Espacement du header et du footer */
+.header {
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+.footer {
+  margin-top: 48px;
+}
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -25,6 +112,32 @@
   to {
     transform: rotate(360deg);
   }
+}
+.collapse {
+  border-radius: 8px;
+  margin: 12px 0;
+  overflow: hidden;
+  background: #f7f7f7;
+}
+
+.collapse__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #ff6060; /* couleur Kasa */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.collapse__content {
+  padding: 16px;
+  background: white;
+  color: #333;
 }
 
 @media (prefers-reduced-motion: no-preference) {
