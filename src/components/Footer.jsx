@@ -1,5 +1,4 @@
-// Footer(logo + copyrigths);
-import logo from "../../public/logo.png";
+import logo from "../../public/logo-white.png";
 export default function Footer() {
   return (
     <footer className="footer">

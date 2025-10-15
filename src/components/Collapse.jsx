@@ -1,7 +1,8 @@
 // Accordion (accordion description/equipement)
 
 import { useState } from "react";
-import "./Collapse.css"; // si tu mets un CSS spécifique
+import arrowUp from "../../public/arrow_up.png";
+import arrowDown from "../../public/arrow_down.png";
 
 export default function Collapse({
   title, // texte ou élément affiché dans l'entête
@@ -20,7 +21,9 @@ export default function Collapse({
         onClick={() => setOpen(!open)}
       >
         <span className="collapse__title">{title}</span>
-        <span className="collapse__chevron">{open ? "▲" : "▼"}</span>
+        <span className="collapse__chevron">
+          {open ? <img src={arrowUp} alt="" /> : <img src={arrowDown} alt="" />}
+        </span>
       </button>
 
       {open && <div className="collapse__content">{children}</div>}
