@@ -1,5 +1,12 @@
 // Tags
-export function Tags() {
-  const tags = ["Appartement", "Studio", "Maison", "Villa"];
-  return <div className="tags"></div>;
+export function Tags({ tags }) {
+  return (
+    <div className="tags">
+      {tags.map((tag, index) => (
+        <span key={index} className="tag">
+          {tag}
+        </span>
+      ))}
+    </div>
+  );
 }

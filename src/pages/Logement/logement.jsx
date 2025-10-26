@@ -4,7 +4,8 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Carrousel from "../../components/Carrousel";
 import Hostprofile from "../../components/Hostprofile";
-import Collaspe from "../../components/Collapse";
+import Collapse from "../../components/Collapse";
+import { Tags } from "../../components/Tags";
 
 export default function Logement() {
   const { id } = useParams();
@@ -52,25 +53,34 @@ export default function Logement() {
       <Header />
       <main className="logement">
         <Carrousel pictures={property.pictures} />
-        <h1>{property.title}</h1>
-        <p>{property.location}</p>
+        <div className="logement_infos">
+          <div className="logement_infos_left">
+            <h1 className="logement_title">{property.title}</h1>
+            <p className="logement_location">{property.location}</p>
+            <Tags tags={property.tags} />
+          </div>
 
-        <Hostprofile host={property.host} rating={property.rating} />
-
-        <div className="tags">
-          {property.tags.map((tag) => (
-            <span key={tag} className="tag">
-              {tag}
-            </span>
-          ))}
+          <Hostprofile host={property.host} rating={property.rating} />
         </div>
-        <Collaspe title="Description" content={property.description} />
-        <Collaspe
-          title="Équipements"
-          content={property.equipments}
-          isList={true}
-        />
-        {/* Étape 4: Collapses Description & Équipements */}
+
+        <div className="logement_collapses">
+          <Collapse
+            key="description"
+            title="Description"
+            children={property.description}
+            className="logement_collapse_item"
+          ></Collapse>
+          <Collapse
+            key="equipements"
+            title="Équipements"
+            children={property.equipments.map((item, index) => (
+              <span key={index}>
+                {item} <br />{" "}
+              </span>
+            ))}
+            className="logement_collapse_item"
+          ></Collapse>
+        </div>
       </main>
       <Footer />
     </>

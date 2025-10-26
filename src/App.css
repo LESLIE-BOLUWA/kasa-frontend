@@ -110,7 +110,6 @@ p {
 .collapse {
   border-radius: 8px;
   overflow: hidden;
-  background: #f7f7f7;
 }
 
 .collapse__header {
@@ -221,21 +220,6 @@ p {
   left: 50%;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
 .read-the-docs {
   color: #888;
 }
@@ -251,4 +235,113 @@ p {
 
 .collapse__content {
   padding: 20px;
+  background: #f7f7f7;
+  text-align: left;
+}
+
+.logement_infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.logement_infos_left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logement_title {
+  font-size: 36px;
+  margin: 0;
+  color: #ff6060;
+  font-weight: 500;
+}
+.logement_location {
+  font-size: 18px;
+  color: #000000;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.tag {
+  background-color: #ff6060;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  padding-left: 40px;
+  padding-right: 40px;
+  text-align: center;
+}
+
+.host-rating {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+}
+.host {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-end;
+}
+.host__name {
+  font-size: 18px;
+  color: #ff6060;
+  font-weight: 500;
+  width: 93px;
+  text-align: right;
+}
+.host__picture {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.rating {
+  display: flex;
+  gap: 4px;
+  justify-content: flex-end;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 8px;
+}
+.star {
+  font-size: 24px;
+  color: #e3e3e3;
+  padding: 5.25px;
+}
+
+.logement_collapses {
+  display: flex;
+  gap: 76px;
+  justify-content: space-between;
+}
+
+.logement_collapse_item {
+  width: 47.5%;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
 }
