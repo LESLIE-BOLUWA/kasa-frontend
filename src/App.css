@@ -339,6 +339,7 @@ p {
 }
 
 @media (min-width: 375px) and (max-width: 480px) {
+  /* HOME PAGE */
   .header {
     margin-left: 20px;
     margin-right: 20px;
@@ -357,5 +358,59 @@ p {
 
   .header__link {
     font-size: 12px;
+  }
+
+  .banner {
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 111px;
+    margin-bottom: 22px;
+    border-radius: 10px;
+  }
+  .banner__title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .card-list {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 27px;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 0px;
+    background-color: transparent;
+  }
+
+  .footer {
+    height: 150px;
+    padding-top: 30px;
+  }
+
+  .footer__text {
+    font-size: 14px;
+  }
+  .carousel {
+    height: 255px;
+    width: 355px;
+    margin-bottom: 30px;
+    border-radius: 0px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+
+  .logement {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
   }
 }

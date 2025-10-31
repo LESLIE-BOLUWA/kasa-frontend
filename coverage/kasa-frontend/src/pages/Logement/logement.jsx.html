@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/76</span>
+                <span class='fraction'>0/80</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/76</span>
+                <span class='fraction'>0/80</span>
             </div>
         
             
@@ -150,7 +150,8 @@
 <a name='L85'></a><a href='#L85'>85</a>
 <a name='L86'></a><a href='#L86'>86</a>
 <a name='L87'></a><a href='#L87'>87</a>
-<a name='L88'></a><a href='#L88'>88</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -220,18 +221,19 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -305,20 +307,21 @@
 <span class="cstat-no" title="statement not covered" >        &lt;div className="logement_collapses"&gt;</span>
 <span class="cstat-no" title="statement not covered" >          &lt;Collapse</span>
 <span class="cstat-no" title="statement not covered" >            key="description"</span>
-<span class="cstat-no" title="statement not covered" >            className="logement_collapses_item"</span>
 <span class="cstat-no" title="statement not covered" >            title="Description"</span>
-          &gt;
-<span class="cstat-no" title="statement not covered" >            &lt;p&gt;{property.description}&lt;/p&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;/Collapse&gt;</span>
+<span class="cstat-no" title="statement not covered" >            children={property.description}</span>
+<span class="cstat-no" title="statement not covered" >            className="logement_collapse_item"</span>
+<span class="cstat-no" title="statement not covered" >          &gt;&lt;/Collapse&gt;</span>
 <span class="cstat-no" title="statement not covered" >          &lt;Collapse</span>
 <span class="cstat-no" title="statement not covered" >            key="equipements"</span>
-<span class="cstat-no" title="statement not covered" >            className="logement_collapses_item"</span>
 <span class="cstat-no" title="statement not covered" >            title="Équipements"</span>
-          &gt;
-<span class="cstat-no" title="statement not covered" >            &lt;p&gt;{property.equipments}&lt;/p&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;/Collapse&gt;</span>
+<span class="cstat-no" title="statement not covered" >            children={property.equipments.map((item, index) =&gt; (</span>
+<span class="cstat-no" title="statement not covered" >              &lt;span key={index}&gt;</span>
+<span class="cstat-no" title="statement not covered" >                {item} &lt;br /&gt;{" "}</span>
+<span class="cstat-no" title="statement not covered" >              &lt;/span&gt;</span>
+<span class="cstat-no" title="statement not covered" >            ))}</span>
+<span class="cstat-no" title="statement not covered" >            className="logement_collapse_item"</span>
+<span class="cstat-no" title="statement not covered" >          &gt;&lt;/Collapse&gt;</span>
 <span class="cstat-no" title="statement not covered" >        &lt;/div&gt;</span>
-        {/* Étape 4: Collapses Description &amp; Équipements */}
 <span class="cstat-no" title="statement not covered" >      &lt;/main&gt;</span>
 <span class="cstat-no" title="statement not covered" >      &lt;Footer /&gt;</span>
 <span class="cstat-no" title="statement not covered" >    &lt;/&gt;</span>
@@ -331,7 +334,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-10-16T12:15:34.113Z
+                at 2025-10-31T07:57:01.948Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
