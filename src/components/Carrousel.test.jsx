@@ -27,6 +27,21 @@ describe("Carrousel", () => {
     expect(wrapper).toHaveStyle(`background-image: url(${IMAGES[1]})`);
     expect(screen.getByText("2 / 3")).toBeInTheDocument();
   });
+  it("affiche un message et aucun bouton s'il n'y a aucune image", () => {
+    render(<Carrousel pictures={[]} />);
+
+    // Message d'état
+    expect(screen.getByText(/aucune photo disponible/i)).toBeInTheDocument();
+
+    // Pas de boutons de navigation
+    expect(
+      screen.queryByRole("button", { name: /image suivante/i })
+    ).not.toBeInTheDocument();
+
+    expect(
+      screen.queryByRole("button", { name: /image précédente/i })
+    ).not.toBeInTheDocument();
+  });
 
   it("revient à la première image après la dernière", async () => {
     const user = userEvent.setup();
@@ -40,5 +55,9 @@ describe("Carrousel", () => {
     const wrapper = screen.getByLabelText("Galerie photos du logement");
     expect(wrapper).toHaveStyle(`background-image: url(${IMAGES[0]})`);
     expect(screen.getByText("1 / 3")).toBeInTheDocument();
+  });
+  it("ne rend rien s'il n'y a aucune image", () => {
+    const { container } = render(<Carousel pictures={[]} />);
+    expect(container.firstChild).toBeNull();
   });
 });
