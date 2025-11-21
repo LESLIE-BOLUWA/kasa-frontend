@@ -27,14 +27,22 @@ export default function Carousel({ pictures }) {
           onClick={prev}
           aria-label="Image précédente"
         >
-          <img src={arrowBackward} alt="flèche gauche" />
+          <img
+            className="carousel__arrow--prev"
+            src={arrowBackward}
+            alt="flèche gauche"
+          />
         </button>
         <button
           className="carousel__btn carousel__btn--next"
           onClick={next}
           aria-label="Image suivante"
         >
-          <img src={arrowForward} alt="flèche droite" />
+          <img
+            className="carousel__arrow--next"
+            src={arrowForward}
+            alt="flèche droite"
+          />
         </button>
       </div>
       <div className="carousel__counter">

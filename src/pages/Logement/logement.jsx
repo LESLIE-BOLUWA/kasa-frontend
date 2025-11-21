@@ -18,7 +18,6 @@ export default function Logement() {
         const res = await fetch(`http://localhost:8080/api/properties/${id}`);
         if (!res.ok) throw new Error("api-list-failed");
         const data = await res.json();
-        console.log(data);
 
         if (data) {
           setProperty(data);

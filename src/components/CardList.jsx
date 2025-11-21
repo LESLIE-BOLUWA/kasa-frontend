@@ -16,8 +16,8 @@ export default function CardList() {
     <div className="card-list">
       {properties.map((property) => (
         <Card
-          key={property.id} // ✅ garde la key
-          id={property.id} // ✅ passe bien l'id à Card
+          key={property.id}
+          id={property.id}
           title={property.title}
           cover={property.cover}
         />
