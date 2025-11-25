@@ -536,10 +536,57 @@ p {
   }
 }
 
-@media (min-width: 640px) and (max-width: 1023px) {
+@media (min-width: 640px) and (max-width: 1024px) {
+  .header {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 20px;
+    margin-bottom: 27px;
+  }
+  .banner {
+    margin-left: 40px;
+    margin-right: 40px;
+    height: 111px;
+    margin-bottom: 22px;
+    border-radius: 10px;
+    padding-left: 16px;
+    justify-content: center;
+  }
+  .banner__title {
+    font-size: 30px;
+    margin-left: 50px;
+  }
+
+  .carousel__arrow--prev {
+    width: 60px;
+    height: 60px;
+  }
+  .carousel__arrow--next {
+    width: 60px;
+    height: 60px;
+  }
   .card-list {
     grid-template-columns: repeat(2, 1fr);
     margin-left: 40px;
     margin-right: 40px;
+  }
+  .logement {
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+  }
+  .about_collapses_list {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .error__code {
+    font-size: 192px;
+    margin-top: 139px;
+    margin-bottom: 80px;
+  }
+  .error__message {
+    font-size: 24px;
+    margin-bottom: 139px;
   }
 }
