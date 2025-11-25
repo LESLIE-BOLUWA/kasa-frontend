@@ -339,7 +339,7 @@ p {
   }
 }
 
-@media (min-width: 375px) and (max-width: 480px) {
+@media (min-width: 375px) and (max-width: 639px) {
   /* HOME PAGE */
   .header {
     margin-left: 20px;
@@ -368,6 +368,7 @@ p {
     margin-bottom: 22px;
     border-radius: 10px;
     padding-left: 16px;
+    justify-content: flex-start;
   }
   .banner__title {
     font-size: 24px;
@@ -528,5 +529,17 @@ p {
 
   .header__link {
     text-transform: uppercase;
+  }
+
+  .br-mobile {
+    display: block;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .card-list {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 40px;
+    margin-right: 40px;
   }
 }

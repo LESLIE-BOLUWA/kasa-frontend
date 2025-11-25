@@ -7,7 +7,14 @@ export default function Home() {
   return (
     <section className="home">
       <Header />
-      <Banner title="Chez vous, partout et ailleurs" image="/bannerhome.png" />
+      <Banner
+        image="/bannerhome.png"
+        title={
+          <>
+            Chez vous, <span className="br-mobile">partout et ailleurs</span>
+          </>
+        }
+      />
       <CardList />
       <Footer />
     </section>

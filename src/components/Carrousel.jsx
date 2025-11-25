@@ -21,30 +21,32 @@ export default function Carousel({ pictures }) {
       style={style}
       aria-label="Galerie photos du logement"
     >
-      <div className="carousel__controls">
-        <button
-          className="carousel__btn carousel__btn--prev"
-          onClick={prev}
-          aria-label="Image précédente"
-        >
-          <img
-            className="carousel__arrow--prev"
-            src={arrowBackward}
-            alt="flèche gauche"
-          />
-        </button>
-        <button
-          className="carousel__btn carousel__btn--next"
-          onClick={next}
-          aria-label="Image suivante"
-        >
-          <img
-            className="carousel__arrow--next"
-            src={arrowForward}
-            alt="flèche droite"
-          />
-        </button>
-      </div>
+      {total > 1 && (
+        <div className="carousel__controls">
+          <button
+            className="carousel__btn carousel__btn--prev"
+            onClick={prev}
+            aria-label="Image précédente"
+          >
+            <img
+              className="carousel__arrow--prev"
+              src={arrowBackward}
+              alt="flèche gauche"
+            />
+          </button>
+          <button
+            className="carousel__btn carousel__btn--next"
+            onClick={next}
+            aria-label="Image suivante"
+          >
+            <img
+              className="carousel__arrow--next"
+              src={arrowForward}
+              alt="flèche droite"
+            />
+          </button>
+        </div>
+      )}
       <div className="carousel__counter">
         {index + 1} / {total}
       </div>
